@@ -1,0 +1,36 @@
+.card{
+    max-width: 40vw;
+    max-height: 50vh;
+    padding: 2vw 2vh;
+    border: solid .3vh;
+    padding: 1vw 1vh;
+    text-align: justify;
+    border-radius: 1vh;
+}
+.cardTesti{
+    width: 35vw;
+    min-height: 30vh;
+    border: solid .4vh;
+    padding: 1vh;
+    text-align: justify;
+    border-radius: 2vh;
+    transition: .4s;
+    background-color: var(--bg);
+    
+}
+.cardTesti:hover{
+    transform: scale(1.1);
+    border: var(--aclaro) solid .4vh;
+}
+@media (max-width:720px) {
+    .card{
+        width: 80vw;
+    }
+    .cardTesti{
+        width: 80vw;
+    }
+    .cardTesti:hover{
+        transform: none;
+        z-index: 0;
+    }
+}

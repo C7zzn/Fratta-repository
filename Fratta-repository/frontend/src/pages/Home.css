@@ -1,0 +1,36 @@
+:root {
+  --txt: #ebebeb;
+  --bg: #0b0f19;
+  --aescuro: #000e30;
+  --aclaro: #38b6ff;
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+}
+
+.home-container{
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.home-container section{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-block: 5vh;
+}
+@media (max-width:730px) {
+    .home-container{
+        width: 100%;
+    }
+    .square{
+        max-width: 200px;
+        max-height: 200px;
+    }
+    .rounded{
+         max-width: 200px;
+    }
+
+}

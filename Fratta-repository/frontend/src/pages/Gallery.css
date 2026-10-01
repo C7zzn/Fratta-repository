@@ -1,0 +1,19 @@
+.gallery-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    justify-content: space-evenly;
+}
+.gallery-container section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: space-evenly;
+    flex-wrap: wrap;
+
+}
+@media (max-width:720px) {
+    .gallery-container section{
+        width: 80% !important;
+    }
+
+}

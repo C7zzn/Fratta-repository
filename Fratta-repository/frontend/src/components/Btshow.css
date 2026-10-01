@@ -1,0 +1,41 @@
+:root {
+  --txt: #ebebeb;
+  --bg: #0b0f19;
+  --aescuro: #000e30;
+  --aclaro: #38b6ff;
+  --atencao: #ffde59;
+  --pare: #ff7979;
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+}
+button{
+    padding-inline: 2vw;
+    padding-block: 1vh;
+    border-radius: 3vh;
+    transition: .4s;
+    cursor: pointer;
+    background-color: transparent;
+}
+.showMoreBlue{
+    padding-inline: 2vw;
+    padding-block: 1vh;
+    border: solid .3vh var(--aclaro);
+    background-color: transparent;
+    color: var(--aclaro);
+    border-radius: 3vh;
+    transition: .4s;
+    cursor: pointer;
+}
+.showMoreYel{
+    padding-inline: 2vw;
+    padding-block: 1vh;
+    border: solid .3vh var(--atencao);
+    color: var(--atencao);
+}
+.showMoreRed{
+    color: var(--pare);
+    border: #ff7979 solid .3vh;
+}
+button:hover{
+    box-shadow: 0vh 0vh 1vh;
+}

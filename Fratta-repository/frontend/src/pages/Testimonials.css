@@ -1,0 +1,18 @@
+.testimonials-container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: space-evenly;
+}
+.testimonials-container section{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: start;
+    padding-inline: 2vh;
+    gap: 40px;
+    padding-block: 5vh;
+}

@@ -1,0 +1,28 @@
+.square{
+    border-radius: 2vh;
+    box-shadow: 0vh 0vh .7vh  var(--aclaro);
+}
+.rounded{
+    border-radius: 100%;
+    box-shadow: 0vh 0vh .7vh  var(--aclaro);
+
+}
+.gallery-picture{
+    transition: .4s;
+    padding: 0;
+    margin: 0;
+    width: 250px;
+    height: 250px;
+    margin-block: 3vh;
+}
+
+.gallery-picture img{
+    width: 200px;
+    height: 200px;
+    transition: .4s;
+    z-index: 1;
+}
+.gallery-picture img:hover{
+    transform: scale(1.2);
+    box-shadow: 0vh 0vh 1vh var(--aclaro);
+}

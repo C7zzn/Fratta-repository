@@ -1,0 +1,13 @@
+footer{
+    background-color: var(--bg);
+    border: none;
+    border-top: var(--aclaro) solid 0.4vh;
+    width: 100%;
+    height: 7vh;
+    box-shadow: #38b6ff 0vh .1vh 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 1;
+}

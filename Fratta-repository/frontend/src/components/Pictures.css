@@ -1,28 +1,40 @@
 .square{
     border-radius: 2vh;
-    box-shadow: 0vh 0vh .7vh  var(--aclaro);
+    box-shadow: 0vh 0vh .7vh var(--aclaro);
 }
+
 .rounded{
     border-radius: 100%;
-    box-shadow: 0vh 0vh .7vh  var(--aclaro);
-
+    box-shadow: 0vh 0vh .7vh var(--aclaro);
 }
+
 .gallery-picture{
     transition: .4s;
     padding: 0;
     margin: 0;
     width: 250px;
-    height: 250px;
     margin-block: 3vh;
+    text-align: center;
 }
 
 .gallery-picture img{
     width: 200px;
     height: 200px;
-    transition: .4s;
+    object-fit: cover;
+    transition: transform .4s ease, box-shadow .4s ease, border-color .4s ease;
     z-index: 1;
-}
-.gallery-picture img:hover{
-    transform: scale(1.2);
+    border-radius: 1vh;
+    border: 3px solid var(--aclaro);
     box-shadow: 0vh 0vh 1vh var(--aclaro);
+    cursor: pointer;
+}
+
+.gallery-picture img:hover{
+    transform: scale(1.1);
+}
+
+.gallery-picture p {
+    color: var(--txt);
+    margin-top: 8px;
+    font-size: 14px;
 }

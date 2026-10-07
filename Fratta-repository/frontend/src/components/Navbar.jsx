@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './Navbar.css';
 import logoImg from '/logo-ferz.png';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom"; // Mudou de Link para NavLink
 
 export function Navbar(){
 
@@ -9,6 +9,7 @@ export function Navbar(){
     const menu = () => {
         setIsOpen(!isOpen);
     };
+
     return(
         <nav className="navbar">
 
@@ -16,18 +17,36 @@ export function Navbar(){
                 <span></span>
                 <span></span>
                 <span></span>
-               
             </button>
             <img src="/logo-ferz.png" alt="Logo" />
-            <div className={`nav-links ${isOpen ? 'active' : ''}`}>
-                <Link to="/" className="navBut">Inicio</Link>
-                <Link to="/Timeline" className="navBut">Linha do Tempo</Link>
-                
-                <Link to="/Gallery" className="navBut">Galeria</Link>
-                <Link to="/CozyArea" className="navBut">Área Descanso</Link>
-                <Link to="/Testimonials" className="navBut">Depoimentos</Link>
-            </div>
             
+            <div className={`nav-links ${isOpen ? 'active' : ''}`}>
+                {}
+                <NavLink to="/" end className={({ isActive }) => isActive ? "navBut active-link" : "navBut"}>
+                    Inicio
+                </NavLink>
+                
+                <NavLink to="/Timeline" className={({ isActive }) => isActive ? "navBut active-link" : "navBut"}>
+                    Linha do Tempo
+                </NavLink>
+                
+                <NavLink to="/Gallery" className={({ isActive }) => isActive ? "navBut active-link" : "navBut"}>
+                    Galeria
+                </NavLink>
+                
+                <NavLink to="/CozyArea" className={({ isActive }) => isActive ? "navBut active-link" : "navBut"}>
+                    Área Descanso
+                </NavLink>
+                
+                <NavLink to="/Testimonials" className={({ isActive }) => isActive ? "navBut active-link" : "navBut"}>
+                    Depoimentos
+                </NavLink>
+                
+                <NavLink to="/login" className={({ isActive }) => isActive ? "navBut active-link" : "navBut"}>
+                    Admin
+                </NavLink>
+            </div>
+              
         </nav>
     );
 }

@@ -20,6 +20,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding-block: 5vh;
+    gap: 2vh;
 }
 @media (max-width:730px) {
     .home-container{

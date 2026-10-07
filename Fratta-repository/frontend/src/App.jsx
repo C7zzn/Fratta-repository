@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
@@ -8,6 +7,9 @@ import { TimeLine } from './pages/Timeline';
 import { Gallery } from './pages/Gallery';
 import { Testimonials } from './pages/Testimonials';
 import { CozyArea } from './pages/CozyArea';
+import { Login } from './pages/admin/Login';
+import { ProtectedRoute } from './components/ProtectedRoute';
+import { Dashboard } from './pages/admin/AdminDashboard';
 
 function App() {
   return (
@@ -18,16 +20,31 @@ function App() {
         </div>
         
         <Routes>
+          {/* Rotas Públicas */}
           <Route path='/' element={<Home/>}/>
           <Route path='/timeline' element={<TimeLine/>}/>
           <Route path='/gallery' element={<Gallery/>}/>
-          <Route path='/cozy' element={<CozyArea/>}/>
+          <Route path='/CozyArea' element={<CozyArea/>}/>
           <Route path='/testimonials' element={<Testimonials/>}/>
+
+          {/* Rota de Login do ADM */}
+          <Route path='/login' element={<Login />} />
+
+          {/* Rota Protegida do Painel Administrativo */}
+          <Route 
+            path='/admin/dashboard' 
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            } 
+          />
         </Routes>
+        
         <Footer/>
       </div>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;

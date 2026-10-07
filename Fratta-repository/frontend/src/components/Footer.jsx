@@ -4,7 +4,7 @@ import './Footer.css'
 export function Footer (){
     return (
         <footer >
-            <p>De Rubi e Caio</p>
+            <p>Vieno Addis e Caio</p>
         </footer>
     );
 }

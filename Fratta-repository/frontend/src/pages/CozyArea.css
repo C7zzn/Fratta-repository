@@ -1,0 +1,151 @@
+.cozy-container {
+    background-color: #1a1412; /* Tom de marrom/café bem escuro e acolhedor */
+    color: #f3e9dc; /* Texto em tom de pergaminho/creme */
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Georgia', serif; /* Fonte com toque mais literário/íntimo */
+    box-sizing: border-box;
+}
+
+.cozy-header {
+    text-align: center;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.cozy-header h2 {
+    font-size: 2.2rem;
+    color: #e09f3e; /* Tom de fogo/chama suave */
+    margin-bottom: 10px;
+}
+
+.cozy-header p {
+    font-size: 1rem;
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
+/* Bloco da Carta (Parece um papel antigo ou rústico) */
+.letter-box {
+    background-color: #fdf0d5; /* Cor de papel antigo */
+    color: #332211; /* Tinta escura */
+    width: 100%;
+    max-width: 550px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 40px rgba(224, 159, 62, 0.1);
+    position: relative;
+    transition: all 1s ease-in-out;
+}
+
+/* Animação de Queima do Papel */
+.letter-box.burning {
+    animation: burnEffect 2s forwards ease-in-out;
+}
+
+@keyframes burnEffect {
+    0% {
+        transform: scale(1) rotate(0deg);
+        filter: brightness(1) hue-rotate(0deg);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    40% {
+        transform: scale(0.98) rotate(1deg);
+        background-color: #d4a373;
+        filter: brightness(1.2) sepia(1);
+        box-shadow: 0 0 50px #e07a5f, 0 0 20px #f4a261;
+    }
+    80% {
+        transform: scale(0.9) rotate(-1deg) translateY(10px);
+        background-color: #5c3a21;
+        color: #5c3a21;
+        filter: brightness(0.5) blur(2px);
+        box-shadow: 0 0 80px #d62828, 0 0 40px #f77f00;
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(0.7) translateY(30px);
+        background-color: #111;
+        color: transparent;
+        filter: blur(8px);
+        box-shadow: 0 0 100px #000;
+        opacity: 0;
+    }
+}
+
+.letter-textarea {
+    width: 100%;
+    height: 220px;
+    background: transparent;
+    border: none;
+    resize: none;
+    font-family: 'Georgia', serif;
+    font-size: 1.1rem;
+    color: #332211;
+    outline: none;
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+.letter-textarea::placeholder {
+    color: #8c7355;
+    font-style: italic;
+}
+
+/* Botão de Queimar */
+.burn-btn {
+    background: linear-gradient(135deg, #e07a5f, #d62828);
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 15px rgba(214, 40, 40, 0.4);
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.burn-btn:hover:not(:disabled) {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.burn-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Efeito da Fogueira / Cinzas */
+.fire-container {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 3rem;
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0% { transform: scale(1); opacity: 0.8; text-shadow: 0 0 10px #f77f00; }
+    100% { transform: scale(1.08); opacity: 1; text-shadow: 0 0 25px #d62828, 0 0 10px #fcbf49; }
+}
+
+.success-message {
+    margin-top: 30px;
+    text-align: center;
+    font-style: italic;
+    color: #e09f3e;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

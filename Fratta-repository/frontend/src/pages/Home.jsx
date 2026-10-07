@@ -23,6 +23,7 @@ export function Home(){
                     <h3 style={{
                         width:'80%',
                         height:'3vh',
+                        paddingBlock:'2vh',
                     }}>Cauã Rodrigues Fratta</h3>
                     <p style={{
                         width:'80%',
@@ -38,7 +39,7 @@ export function Home(){
                 <div>
                     <RoundImg
                         src={logoImg}
-                        style={{width:'20px', height:'30px'}}
+                        wid={250}
                     />
                 </div>
             </section>

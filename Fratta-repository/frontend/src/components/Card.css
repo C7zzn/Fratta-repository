@@ -1,36 +1,135 @@
-.card{
+.card {
     max-width: 40vw;
     max-height: 50vh;
     padding: 2vw 2vh;
     border: solid .3vh;
-    padding: 1vw 1vh;
     text-align: justify;
     border-radius: 1vh;
 }
-.cardTesti{
-    width: 35vw;
-    min-height: 30vh;
-    border: solid .4vh;
-    padding: 1vh;
-    text-align: justify;
+
+/* === CARD TESTI === */
+.cardTesti {
+    width: 45vw;
+    border-left: solid 0.6vh var(--aclaro);
+    border-top: solid 0.15vh rgba(255, 255, 255, 0.1);
+    border-right: solid 0.15vh rgba(255, 255, 255, 0.1);
+    border-bottom: solid 0.15vh rgba(255, 255, 255, 0.1);
     border-radius: 2vh;
-    transition: .4s;
+    padding: 2vh 2.5vw;
+    text-align: justify;
     background-color: var(--bg);
-    
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0;
 }
-.cardTesti:hover{
-    transform: scale(1.1);
-    border: var(--aclaro) solid .4vh;
+
+.cardTesti:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
-@media (max-width:720px) {
-    .card{
+
+.cardTesti h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--aclaro);
+}
+
+.cardTesti-author {
+    font-size: 0.85rem;
+    opacity: 0.85;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px 10px;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.cardTesti-text {
+    margin: 5px 0 0 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* === CARD SPECIAL (ADMIN) - Hover corrigido === */
+.card-special {
+    width: 45vw;
+    border-left: solid 0.6vh var(--atencao);
+    border-top: solid 0.15vh rgba(255, 255, 255, 0.1);
+    border-right: solid 0.15vh rgba(255, 255, 255, 0.1);
+    border-bottom: solid 0.15vh rgba(255, 255, 255, 0.1);
+    border-radius: 2.5vh;
+    text-align: justify;
+    background-color: var(--bg);
+    /* REMOVIDO o overflow: hidden para o hover soltar livremente */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px 0;
+}
+
+.card-special:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* O banner agora arredonda seus próprios cantos superiores de forma independente */
+.card-special-banner {
+    padding: 8px 15px;
+    color: #000;
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    border-top-left-radius: 2.3vh;
+    border-top-right-radius: 2.3vh;
+}
+
+.card-special-content {
+    padding: 2vh 2.5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-special-content h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.card-special-author {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px 10px;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.card-special-text {
+    margin: 5px 0 0 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 720px) {
+    .card {
         width: 80vw;
     }
-    .cardTesti{
-        width: 80vw;
+    .cardTesti {
+        width: 88vw;
     }
-    .cardTesti:hover{
+    .cardTesti:hover {
         transform: none;
-        z-index: 0;
+    }
+    .card-special {
+        width: 88vw;
+    }
+    .card-special:hover {
+        transform: none;
     }
 }

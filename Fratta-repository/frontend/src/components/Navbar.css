@@ -43,6 +43,12 @@ nav img{
     transition: .3s;
     color: var(--aclaro);
 }
+.navBut:hover,
+.navBut.active-link {
+    transition: .3s;
+    color: var(--aclaro);
+}
+
 .menu{
     display: flex;
     flex-direction: column;

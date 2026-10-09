@@ -25,6 +25,7 @@ button{
     border-radius: 3vh;
     transition: .4s;
     cursor: pointer;
+    text-decoration: none;
 }
 .showMoreYel{
     padding-inline: 2vw;

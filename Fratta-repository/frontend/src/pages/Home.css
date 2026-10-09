@@ -14,6 +14,9 @@
     justify-content: center;
 
 }
+.container-Caua{
+    width: 50;
+}
 .home-container section{
     width: 100%;
     display: flex;
@@ -25,6 +28,11 @@
 @media (max-width:730px) {
     .home-container{
         width: 100%;
+    }
+    .container-Caua{
+        width: 90vw;
+        display: flex;
+        flex-wrap: wrap;
     }
     .square{
         max-width: 200px;

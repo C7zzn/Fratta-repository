@@ -1,23 +1,21 @@
 import React from "react";
 import './Home.css';
-import {Card} from '../components/Card'
-import {BtshowBlue, BtShowYel, BtShowRed} from "../components/Btshow";
+import { Card } from '../components/Card';
+import { BtshowBlue, BtShowYel, BtShowRed } from "../components/Btshow";
 import { RoundImg, SquareImg } from "../components/Pictures";
-import { Tit, Text } from "../components/Texts";
 import logoImg from '/logo-ferz.png';
+import CauaFazendoPose from '/CauaFazendoPose.jpeg';
 import { Link } from "react-router-dom";
-
 
 export function Home(){
     return(
-
         <div className="home-container">
             <section style={{
                 height:'100vh',
                 paddingBlockEnd:'40vh'
             }}>
                     <SquareImg
-                        src={logoImg}
+                        src={CauaFazendoPose}
                         wid={400}
                     />
                     <h3 style={{
@@ -30,11 +28,18 @@ export function Home(){
                         height:'3vh'
                     }}>"Pra quem tem fé, a vida nunca tem fim"</p>
             </section>
+            
             <section>
                 <div>
-                    <Card/>
+                    <Card
+                        title={"Quem foi Cauã Fratta"}
+                        text={'Cauã, um amigo, irmão, filho e ser humano de grande espírito. Seus 16 anos foi um exemplo de vida para quem o conheceu. Cauã amava Basquete, Música, a arte, o humanismo e a acima de tudo, A vida. Amou desde o brilho do sol até a mais pequena gentileza que fizeram por ele, foi grato sobretudo pela oportunidade de aproveitar e amar os seus. Sorriu, abraçou, ajudou, ouviu e com isso transformou aqueles com quem conviveu. Cauã teve de ir cedo, mas tal qual as estrelas que ele tanto admirava, brilhou e continua a brilhar, hoje junto com elas.'}
+                    />
                      <br/>
-                    <BtshowBlue/>
+                    <BtshowBlue 
+                        link={'/Testimonials'}
+                        text="Ver mais Depoimentos"
+                    />
                 </div>
                 <div>
                     <RoundImg
@@ -43,7 +48,9 @@ export function Home(){
                     />
                 </div>
             </section>
+            
             <section>
+                {/* 1º Botão: Direciona para a página de Poesias */}
                 <div>
                     <RoundImg
                         src={logoImg}
@@ -51,28 +58,40 @@ export function Home(){
                     />
                     <br/>
                     <br/>
-                    <BtshowBlue/>
+                    <BtshowBlue 
+                        link={'/Poems'}
+                        text="Poemas"
+                    />
                 </div>
+
+                {/* 2º Botão: Direciona para a Linha do Tempo */}
                  <div>
                     <RoundImg
                         src={logoImg}
                         wid={200}
                     />
-                     <br/>
-                     <br/>
-                    <BtShowYel/>
+                    <br/>
+                    <br/>
+                    <BtShowYel 
+                        link={'/Music'}
+                        text="Músicas"
+                    />
                 </div>
+
+                {/* 3º Botão: Direciona para a Área de Descanso */}
                 <div>
                     <RoundImg
                         src={logoImg}
-                        wid = {200}
+                        wid={200}
                     />
                      <br/>
                      <br/>
-                    <BtShowRed/>
+                    <BtShowRed 
+                        link={'/Gallery'}
+                        text="Imagens"
+                    />
                 </div>
             </section>
         </div>
-    )
-    
+    );
 }

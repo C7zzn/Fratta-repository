@@ -117,8 +117,9 @@
 }
 
 @media (max-width: 720px) {
-    .card {
-        width: 80vw;
+    .card{
+        max-width: 88vw;
+        max-height: none;
     }
     .cardTesti {
         width: 88vw;
@@ -126,9 +127,10 @@
     .cardTesti:hover {
         transform: none;
     }
-    .card-special {
+    .card-special{
         width: 88vw;
     }
+
     .card-special:hover {
         transform: none;
     }

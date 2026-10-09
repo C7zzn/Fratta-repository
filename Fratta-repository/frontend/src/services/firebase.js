@@ -1,7 +1,7 @@
 // src/services/firebase.js
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getAuth } from "firebase/auth";
+import { getAuth, setPersistence, browserLocalPersistence } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 // As suas credenciais do projeto Fratta Memorial
@@ -22,3 +22,8 @@ const analytics = getAnalytics(app);
 // Exportamos o Auth (para o login) e o DB (para o banco de dados)
 export const auth = getAuth(app);
 export const db = getFirestore(app);
+
+// Garante que o administrador continue logado mesmo atualizando a página ou fechando o navegador
+setPersistence(auth, browserLocalPersistence).catch((error) => {
+  console.error("Erro ao definir persistência do auth:", error);
+});
